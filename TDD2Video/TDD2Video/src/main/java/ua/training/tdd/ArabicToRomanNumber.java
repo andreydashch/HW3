@@ -19,8 +19,10 @@ public class ArabicToRomanNumber {
         boolean noNumber = arabicNumber == 0;
         if (noNumber) {
             return getDefaultNumber();
-        }else{
+        }if (arabicNumber == 1){
             return "I";
+        }else{
+            return "II";
         }
     }
 

@@ -19,5 +19,9 @@ public class TestArabicToRomanNumber {
         Assert.assertEquals("I", romanNumber);
     }
 
-
+    @Test
+    public void Convert_2_To_II() {
+        romanNumber = ArabicToRomanNumber.convert(2);
+        Assert.assertEquals("II", romanNumber);
+    }
 }
