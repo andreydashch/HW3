@@ -16,17 +16,17 @@ package ua.training.tdd;
 public class ArabicToRomanNumber {
 
     public static String convert(int arabicNumber) {
-        boolean noNumber = arabicNumber == 0;
-        if (noNumber) {
-            return getDefaultNumber();
-        }if (arabicNumber == 1){
-            return "I";
-        }else{
-            return "II";
+        StringBuilder romanNumber = new StringBuilder(getDefRomanNumber());
+
+        while(arabicNumber >= 1){
+            romanNumber.append("I");
+            arabicNumber--;
         }
+
+        return romanNumber.toString();
     }
 
-    private static String getDefaultNumber() {
+    private static String getDefRomanNumber() {
         return "";
     }
 }

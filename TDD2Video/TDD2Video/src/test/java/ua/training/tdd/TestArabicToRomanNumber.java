@@ -24,4 +24,10 @@ public class TestArabicToRomanNumber {
         romanNumber = ArabicToRomanNumber.convert(2);
         Assert.assertEquals("II", romanNumber);
     }
+
+    @Test
+    public void Convert_3_To_III() {
+        romanNumber = ArabicToRomanNumber.convert(3);
+        Assert.assertEquals("III", romanNumber);
+    }
 }
