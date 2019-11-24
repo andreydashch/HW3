@@ -61,4 +61,16 @@ public class TestArabicToRomanNumber {
         Assert.assertEquals("X", romanNumber);
     }
 
+    @Test
+    public void Convert_19_To_XIV() {
+        romanNumber = ArabicToRomanNumber.convert(14);
+        Assert.assertEquals("XIV", romanNumber);
+    }
+
+    @Test
+    public void Convert_19_To_XVIII() {
+        romanNumber = ArabicToRomanNumber.convert(18);
+        Assert.assertEquals("XVIII", romanNumber);
+    }
+
 }
