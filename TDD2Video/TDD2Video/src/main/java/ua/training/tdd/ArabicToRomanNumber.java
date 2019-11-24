@@ -16,6 +16,10 @@ package ua.training.tdd;
 public class ArabicToRomanNumber {
 
     public static String convert(int arabicNumber) {
-        return "";
+        if (arabicNumber == 0) {
+            return "";
+        }else{
+            return "I";
+        }
     }
 }
