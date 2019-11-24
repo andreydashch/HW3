@@ -21,6 +21,7 @@ public class ArabicToRomanNumber {
 
     static {
         map = new ArrayList<>();
+        map.add(new Pair<>(10, "X"));
         map.add(new Pair<>(5, "V"));
         map.add(new Pair<>(1, "I"));
     }

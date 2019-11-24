@@ -54,4 +54,11 @@ public class TestArabicToRomanNumber {
         romanNumber = ArabicToRomanNumber.convert(4);
         Assert.assertEquals("IV", romanNumber);
     }
+
+    @Test
+    public void Convert_10_To_X() {
+        romanNumber = ArabicToRomanNumber.convert(10);
+        Assert.assertEquals("X", romanNumber);
+    }
+
 }
