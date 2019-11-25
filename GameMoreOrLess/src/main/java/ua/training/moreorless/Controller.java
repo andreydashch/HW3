@@ -44,12 +44,26 @@ public class Controller {
     }
 
     private int  setValidAttemptFromBarrier(Scanner sc) {
-        int input;
+        int validValue;
+        boolean inBarrier;
         String hintMessage = generateHintMessage();
 
-        return sc.nextInt();
-        // Implement validation
+        do {
+            validValue = validateForInt(sc, hintMessage);
+            inBarrier = ((validValue < model.getMaxBarrier()) ||
+                         (validValue > model.getMinBarrier()));
+        } while(!(inBarrier));
 
+        return validValue;
+    }
+
+    private int validateForInt(Scanner sc, String hintMessage) {
+        while (true) {
+            view.printMessage(hintMessage);
+            if (sc.hasNextInt()) {
+                return sc.nextInt();
+            }
+        }
     }
 
     private String generateHintMessage() {
