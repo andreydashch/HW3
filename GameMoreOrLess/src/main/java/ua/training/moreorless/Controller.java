@@ -44,7 +44,23 @@ public class Controller {
     }
 
     private int  setValidAttemptFromBarrier(Scanner sc) {
+        int input;
+        String hintMessage = generateHintMessage();
+
         return sc.nextInt();
-        //Edd validation
+        // Implement validation
+
+    }
+
+    private String generateHintMessage() {
+        StringBuilder hintMessage = new StringBuilder();
+
+        hintMessage.append(GlobalTextConstants.INPUT_INT + GlobalTextConstants.NEW_LINE);
+        hintMessage.append(GlobalTextConstants.START_INPUT_IN_RANGE);
+        hintMessage.append(model.getMinBarrier() + GlobalTextConstants.RANGE_SEPARATOR);
+        hintMessage.append(model.getMaxBarrier());
+        hintMessage.append(GlobalTextConstants.END_INPUT_IN_RANGE);
+
+        return hintMessage.toString();
     }
 }

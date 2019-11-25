@@ -14,7 +14,7 @@ package ua.training.moreorless;
  */
 public class View {
 
-    public void printConcatenateMessage(String ... strings) {
+    public String ConcatenateMessages(String ... strings) {
         StringBuilder message = new StringBuilder();
         for(String temp : strings){
             message.append(temp);
