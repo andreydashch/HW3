@@ -9,6 +9,8 @@
 
 package ua.training.moreorless;
 
+import java.util.Scanner;
+
 /**
  * @author      Dashchyk Andrey
  */
@@ -24,6 +26,8 @@ public class Controller {
     public void processUser(){
         view.printMessage(GlobalTextConstants.RULES);
 
+        model.setTargetNumberFromPrimaryBarrier(
+                InitConstants.MIN_RANDOM_TARGET, InitConstants.MAX_RANDOM_TARGET);
         gameLoop();
 
         view.printMessage(GlobalTextConstants.CONGRATULATION);
