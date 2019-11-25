@@ -20,21 +20,38 @@ public class Model {
     private int maxBarrier;
     private ArrayList<Integer> history;
 
+    public boolean checkValue(int actual) {
+        boolean isEqual = (actual == targetNumber);
+
+        history.add(actual);
+        updateBarrier(actual);
+
+        return isEqual;
+    }
+
+    private void updateBarrier(int actual) {
+        if (actual > targetNumber){
+            setBarrier(minBarrier, actual);
+        } else if (actual < targetNumber){
+            setBarrier(actual, maxBarrier);
+        }
+    }
+
+    public int getTargetNumber() {
+        return targetNumber;
+    }
+
     /*
      * Test is ignored
      * Run it after changes
      */
     public void setTargetNumberFromPrimaryBarrier(int min, int max) {
         targetNumber = (int)((Math.random() * ++max) + min);
-        setPrimaryBarrier(min, max);
+        setBarrier(min, max);
     }
 
-    private void setPrimaryBarrier(int min, int max) {
+    private void setBarrier(int min, int max) {
         this.minBarrier = min;
         this.maxBarrier = max;
     }
-    public int getTargetNumber() {
-        return targetNumber;
-    }
-
 }
