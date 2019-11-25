@@ -20,6 +20,10 @@ public class Model {
     private int maxBarrier;
     private ArrayList<Integer> history;
 
+    Model(){
+            history = new ArrayList<>();
+    }
+
     public boolean checkValue(int actual) {
         boolean isEqual = (actual == targetNumber);
 
@@ -42,8 +46,8 @@ public class Model {
      * Run it after changes
      */
     public void setTargetNumberFromPrimaryBarrier(int min, int max) {
-        targetNumber = (int)((Math.random() * ++max) + min);
         setBarrier(min, max);
+        targetNumber = (int)((Math.random() * ++max) + min);
     }
 
     private void setBarrier(int min, int max) {
