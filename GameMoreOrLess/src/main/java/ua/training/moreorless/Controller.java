@@ -22,5 +22,14 @@ public class Controller {
     }
 
     public void processUser(){
+        view.printMessage(GlobalTextConstants.RULES);
+
+        gameLoop();
+
+        view.printMessage(GlobalTextConstants.CONGRATULATION);
+    }
+
+    private void gameLoop() {
+
     }
 }
