@@ -13,10 +13,11 @@ public class TestModel {
 
     @Test
     public void TestSetRandomNumber() {
+        int count = 10000;
         int randomNumber;
         boolean inBorder = false;
 
-        for(int i=0;i<10000;i++){
+        for(int i=0;i<count;i++){
             model.setRandomTargetNumber(InitConstants.MIN_RANDOM_TARGET, InitConstants.MAX_RANDOM_TARGET);
             randomNumber = model.getTargetNumber();
             inBorder = isInBorder(randomNumber);
