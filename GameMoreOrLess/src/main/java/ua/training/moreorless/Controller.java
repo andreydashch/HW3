@@ -50,7 +50,7 @@ public class Controller {
 
         do {
             validValue = validateForInt(sc, hintMessage);
-            inBarrier = ((validValue < model.getMaxBarrier()) ||
+            inBarrier = ((validValue < model.getMaxBarrier()) &&
                          (validValue > model.getMinBarrier()));
         } while(!(inBarrier));
 
@@ -62,6 +62,8 @@ public class Controller {
             view.printMessage(hintMessage);
             if (sc.hasNextInt()) {
                 return sc.nextInt();
+            }else{
+                sc.next();
             }
         }
     }
