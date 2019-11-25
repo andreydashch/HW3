@@ -27,7 +27,7 @@ public class Model {
     public boolean checkValue(int actual) {
         boolean isEqual = (actual == targetNumber);
 
-        history.add(actual);
+        history.add(Integer.valueOf(actual));
         updateBarrier(actual);
 
         return isEqual;

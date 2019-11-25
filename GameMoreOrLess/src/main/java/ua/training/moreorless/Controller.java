@@ -31,6 +31,8 @@ public class Controller {
         gameLoop();
 
         view.printMessage(GlobalTextConstants.CONGRATULATION);
+        view.printMessage(GlobalTextConstants.HISTORY);
+        view.printMessage(model.getHistory().toString());
     }
 
     private void gameLoop() {
@@ -39,7 +41,6 @@ public class Controller {
 
         do{
             attempt = setValidAttemptFromBarrier(sc);
-            model.checkValue(attempt);
         }while(!(model.checkValue(attempt)));
     }
 
