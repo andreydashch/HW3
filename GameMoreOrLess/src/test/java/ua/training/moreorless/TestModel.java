@@ -2,6 +2,7 @@ package ua.training.moreorless;
 
 import org.junit.Assert;
 import org.junit.BeforeClass;
+import org.junit.Ignore;
 import org.junit.Test;
 
 public class TestModel {
@@ -11,9 +12,11 @@ public class TestModel {
         model = new Model();
     }
 
+    // For practice
+    @Ignore // Big loop, long execution (43 ms)
     @Test
     public void TestSetRandomNumber() {
-        int count = 10000;
+        int count = 1000000;
         int randomNumber;
         boolean inBorder = false;
 

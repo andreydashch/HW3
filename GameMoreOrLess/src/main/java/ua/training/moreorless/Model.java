@@ -20,6 +20,10 @@ public class Model {
     private int maxBarrier;
     private ArrayList<Integer> history;
 
+    /*
+     * Test is ignored
+     * Run it after changes
+     */
     public void setTargetNumberFromPrimaryBarrier(int min, int max) {
         targetNumber = (int)((Math.random() * ++max) + min);
         setPrimaryBarrier(min, max);
