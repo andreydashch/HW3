@@ -34,6 +34,17 @@ public class Controller {
     }
 
     private void gameLoop() {
+        Scanner sc = new Scanner(System.in);
+        int attempt;
 
+        do{
+            attempt = setValidAttemptFromBarrier(sc);
+            model.checkValue(attempt);
+        }while(!(model.checkValue(attempt)));
+    }
+
+    private int  setValidAttemptFromBarrier(Scanner sc) {
+        return sc.nextInt();
+        //Edd validation
     }
 }
