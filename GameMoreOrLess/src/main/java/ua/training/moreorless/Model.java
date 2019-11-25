@@ -16,7 +16,7 @@ public class Model {
     private int targetNumber;
 
     public void setRandomTargetNumber(int min, int max) {
-        targetNumber = 100;
+        targetNumber = (int)((Math.random() * ++max) + min);
     }
 
     public int getTargetNumber() {
