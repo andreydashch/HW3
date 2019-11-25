@@ -37,10 +37,6 @@ public class Model {
         }
     }
 
-    public int getTargetNumber() {
-        return targetNumber;
-    }
-
     /*
      * Test is ignored
      * Run it after changes
@@ -53,5 +49,21 @@ public class Model {
     private void setBarrier(int min, int max) {
         this.minBarrier = min;
         this.maxBarrier = max;
+    }
+
+    public int getTargetNumber() {
+        return targetNumber;
+    }
+
+    public int getMinBarrier(){
+        return minBarrier;
+    }
+
+    public int getMaxBarrier(){
+        return maxBarrier;
+    }
+
+    public ArrayList<Integer> getHistory(){
+        return history;
     }
 }
