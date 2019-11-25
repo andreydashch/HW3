@@ -18,7 +18,7 @@ public class TestModel {
         boolean inBorder = false;
 
         for(int i=0;i<count;i++){
-            model.setRandomTargetNumber(InitConstants.MIN_RANDOM_TARGET, InitConstants.MAX_RANDOM_TARGET);
+            model.setTargetNumberFromPrimaryBarrier(InitConstants.MIN_RANDOM_TARGET, InitConstants.MAX_RANDOM_TARGET);
             randomNumber = model.getTargetNumber();
             inBorder = isInBorder(randomNumber);
         }
@@ -35,5 +35,8 @@ public class TestModel {
 
         return inBorder;
     }
+
+
+
 
 }
